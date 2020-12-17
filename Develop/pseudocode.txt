@@ -5,6 +5,9 @@ Create an array of every lower case letter.
 Create an array of every upper case letter.
 Create an array of every number 0-9.
 Create an array of special characters.
+Define boolean variables for each type including lower, upper, numbers and special characters.
+Define an output password string variable.
+
 
 User Input Stage
 
@@ -12,14 +15,19 @@ Create a prompt that shows up when you click the button
 This prompt should have an input field that allows the user to choose a password length between 8 and 128 characters.
 If the user enters something other than a number between 8 and 128, reject the input and retry.
 If the user inputs a valid number, define the password length variable with that number.
+Create confirms asking about each boolean variable type.
+Store each response for each boolean variable.
 
 
+Character Array Creation
 
-
-
+Using the newly defined boolean variables, create a master array from the arrays with true booleans. Do this with if statements and appends.
 
 
 Password Generation
-Create a loop function that iterates up to the variable for password length.
-In this loop,
 
+Create a loop function that iterates up to the variable for password length.
+In this loop, run a random number generator, multiply by the master array length, and use this as an index to choose a random character from the master array.
+Return this into the password variable, and continue to repeat until the password length is reached.
+
+Once that has happened, use an appendtext to add the password to the display, or put it in an alert.
