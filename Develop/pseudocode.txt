@@ -1,0 +1,25 @@
+Initial Setup
+
+Create a variable for password length, this will be set by the user input.
+Create an array of every lower case letter.
+Create an array of every upper case letter.
+Create an array of every number 0-9.
+Create an array of special characters.
+
+User Input Stage
+
+Create a prompt that shows up when you click the button
+This prompt should have an input field that allows the user to choose a password length between 8 and 128 characters.
+If the user enters something other than a number between 8 and 128, reject the input and retry.
+If the user inputs a valid number, define the password length variable with that number.
+
+
+
+
+
+
+
+Password Generation
+Create a loop function that iterates up to the variable for password length.
+In this loop,
+
