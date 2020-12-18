@@ -1,9 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
+
 // Create variables
 var passwordLength = 0;
-var passwordOutput = "";
+var password = "";
 var incLower = false;
 var incUpper = false;
 var incNumber = false;
@@ -16,7 +18,8 @@ var NumberArray = [0,1,2,3,4,5,6,7,8,9];
 var SpecialArray = ["!","@","#","$","%","^","&","*","(",")"];
 var masterArray = [];
 
-// Get User Inputs
+// Start function and get User Inputs
+function generatePassword() {
 passwordLength = prompt("How long would you like your password to be?  n/ Enter an integer between 8 and 128");
 if (passwordLength < 8 || passwordLength > 128) {
   alert("Invalid input, please choose a number between 8 and 128");
@@ -38,44 +41,46 @@ if (incLower === false && incNumber === false && incUpper === false && incNumber
 }
 
 // Create the master array
-if (incLower === true) {
-  for (i = 0; i < LowerArray.length; i++) {
-    masterArray.push(LowerArray[i]);
+
+  if (incLower === true) {
+    for (i = 0; i < LowerArray.length; i++) {
+      masterArray.push(LowerArray[i]);
+    }
   }
-}
-
-if (incUpper === true) {
-  for (i = 0; i < UpperArray.length; i++) {
-    masterArray.push(UpperArray[i]);
+  
+  if (incUpper === true) {
+    for (i = 0; i < UpperArray.length; i++) {
+      masterArray.push(UpperArray[i]);
+    }
   }
-}
-
-if (incNumber === true) {
-  for (i = 0; i < NumberArray.length; i++) {
-    masterArray.push(NumberArray[i]);
+  
+  if (incNumber === true) {
+    for (i = 0; i < NumberArray.length; i++) {
+      masterArray.push(NumberArray[i]);
+    }
   }
-}
-
-if (incSpecial === true) {
-  for (i = 0; i < SpecialArray.length; i++) {
-    masterArray.push(SpecialArray[i]);
+  
+  if (incSpecial === true) {
+    for (i = 0; i < SpecialArray.length; i++) {
+      masterArray.push(SpecialArray[i]);
+    }
   }
-}
+  
+  // Readout check on the master array
+  console.log(masterArray);
+  
+  // Create random numbers
+  
+  
+  // Create a password from the master array
+  
 
-// Readout check on the master array
-console.log(masterArray);
-
-// Create random numbers
-
-
-// Create a password from the master array
-
-for (i=0; i < passwordLength; i++) {
-  var num = Math.floor(Math.random()*masterArray.length);
-  passwordOutput = passwordOutput + masterArray[num];
-}
-
-
+    for (i=0; i < passwordLength; i++) {
+      var num = Math.floor(Math.random()*masterArray.length);
+      password = password + masterArray[num];
+    }
+    return password;
+ }
 
 // Write password to the #password input
 function writePassword() {
