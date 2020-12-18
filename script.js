@@ -20,7 +20,7 @@ var masterArray = [];
 passwordLength = prompt("How long would you like your password to be?  n/ Enter an integer between 8 and 128");
 if (passwordLength < 8 || passwordLength > 128) {
   alert("Invalid input, please choose a number between 8 and 128");
-  var passwordLength1 = prompt("How long would you like your password to be?  n/ Enter an integer between 8 and 128");
+  var passwordLength = prompt("How long would you like your password to be?  n/ Enter an integer between 8 and 128");
 }
 
 incLower = confirm("Would you like the password to include lower case letters?");
@@ -28,6 +28,7 @@ incUpper = confirm("Would you like the password to include upper case letters?")
 incNumber = confirm("Would you like the password to include numbers?");
 incSpecial = confirm("Would you like the password to include special characters?");
 
+// Check something is chosen
 if (incLower === false && incNumber === false && incUpper === false && incNumber === false) {
   alert("Invalid input, please choose at least one character type.");
   incLower = confirm("Would you like the password to include lower case letters?");
@@ -36,7 +37,7 @@ if (incLower === false && incNumber === false && incUpper === false && incNumber
   incSpecial = confirm("Would you like the password to include special characters?");
 }
 
-
+// Create the master array
 if (incLower === true) {
   for (i = 0; i < LowerArray.length; i++) {
     masterArray.push(LowerArray[i]);
@@ -61,7 +62,20 @@ if (incSpecial === true) {
   }
 }
 
+// Readout check on the master array
 console.log(masterArray);
+
+// Create random numbers
+
+
+// Create a password from the master array
+
+for (i=0; i < passwordLength; i++) {
+  var num = Math.floor(Math.random()*masterArray.length);
+  passwordOutput = passwordOutput + masterArray[num];
+}
+
+
 
 // Write password to the #password input
 function writePassword() {
