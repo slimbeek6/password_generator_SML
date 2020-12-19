@@ -28,7 +28,7 @@ passwordLength = prompt("How long would you like your password to be?  \n Enter 
 
   console.log(letterCheck);
   console.log(specialCheck);
-  console.log(passwordLength.value);
+  
 
   // Check password length is in the right range
   if (passwordLength >= 8 && passwordLength <= 128 && letterCheck === false && specialCheck === false) {
@@ -37,9 +37,13 @@ passwordLength = prompt("How long would you like your password to be?  \n Enter 
   else {
     alert("Invalid input, please choose a number between 8 and 128");
     var passwordLength = prompt("How long would you like your password to be? \n Enter an integer between 8 and 128");
-    letterCheck = LowerArray.includes(passwordLength.toLowerCase());
-    specialCheck = SpecialArray.includes(passwordLength);
   }
+
+  letterCheck = LowerArray.includes(passwordLength.toLowerCase());
+  specialCheck = SpecialArray.includes(passwordLength);
+
+  console.log(letterCheck);
+  console.log(specialCheck);
 
   if (passwordLength >= 8 && passwordLength <= 128 && letterCheck === false && specialCheck === false) {
     console.log(passwordLength);
