@@ -38,7 +38,7 @@ passwordLength = prompt("How long would you like your password to be?  \n Enter 
     var passwordLength = prompt("How long would you like your password to be? \n Enter an integer between 8 and 128");
   }
 
-  if (passwordLength >= 8 || passwordLength <= 128 && letterCheck === false && specialCheck === false) {
+  if (passwordLength >= 8 && passwordLength <= 128 && letterCheck === false && specialCheck === false) {
     console.log(passwordLength);
   }
   else {
