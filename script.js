@@ -36,7 +36,7 @@ passwordLength = prompt("How long would you like your password to be?  \n Enter 
   }
   else {
     alert("Invalid input, please choose a number between 8 and 128");
-    var passwordLength = prompt("How long would you like your password to be? \n Enter an integer between 8 and 128");
+    passwordLength = prompt("How long would you like your password to be? \n Enter an integer between 8 and 128");
   }
 
   letterCheck = LowerArray.includes(passwordLength.toLowerCase());
