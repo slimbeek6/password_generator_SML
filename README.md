@@ -1,3 +1,6 @@
-# password_generator_SML
+# Password Generator App
 
-![Picture of Website](/Assets/03-javascript-homework-demo.png)
+## Summary
+The ask for this was to create a web based application that creates random passwords based on the user's desired character types and password length.  
+
+![Picture of Website](./Assets/pic-of-site.png)
